@@ -36,14 +36,14 @@ describe('AppComponent', () => {
     expect(comp.isOn).toBe(false);
   });
   
-  it('should welcome logged in user after calls login()', () => {
+  it('should #welcome logged in user after calls login()', () => {
     comp.login();
     expect(comp.isOn).toBe(true);
     expect(userLogService.isLoggedIn).toBe(true);
     expect(comp.welcome).toContain(`Welcome Test User from MockUserService`);
   });
 
-  it('should welcome logged out user after calls logout()', () => {
+  it('should #welcome logged out user after calls logout()', () => {
     comp.logout();
     expect(comp.isOn).toBe(false);
     expect(userLogService.isLoggedIn).toBe(true);
